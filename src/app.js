@@ -5,6 +5,7 @@ const request=require('request');
 const hbs=require('hbs');
 const express=require('express');
 const app=express();
+const PORT=process.env.PORT||3000;
 
 const publicDirectoryPath=path.join(__dirname,'../public');
 const viewsPath=path.join(__dirname,'../templates/views');
@@ -87,6 +88,6 @@ app.get('*',(req,res)=>{
 })
 
 
-app.listen('3000',()=>{
+app.listen(PORT,()=>{
 console.log('Server started at port 3000');
 });
